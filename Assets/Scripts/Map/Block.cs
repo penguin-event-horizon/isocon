@@ -761,6 +761,7 @@ public class Block : MonoBehaviour
         GameObject block = Instantiate(Resources.Load("Prefabs/Block") as GameObject);
         block.name = "block-" + x + "," + z + "," + y;
         block.transform.parent = column.transform;
+		block.transform.SetSiblingIndex((int)z);
         block.transform.localScale = Vector3.one;
         block.transform.localPosition = new Vector3(0, z, 0);
         block.transform.localRotation = Quaternion.Euler(0, r, 0);
